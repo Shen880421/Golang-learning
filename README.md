@@ -87,19 +87,23 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 dlv (Delve 的縮寫) 就是 Go 語言的官方偵錯工具 (debugger)
 
-```cmd
+```bash
 go install github.com/go-delve/delve/cmd/dlv@latest
 ```
 
 設定環境變數, Go 工具的安裝路徑
 
-```cmd
-export PATH=$PATH:$(go env GOPATH)/bin
+```bash
+vim ~/.bashr
+```
+
+```vim
+export PATH="$PATH:/c/Users/SCE/go/bin"
 ```
 
 確認是否安裝成功
 
-```cmd
+```bash
 dlv version
 ```
 
@@ -109,13 +113,28 @@ dlv version
 
 目前的 Go 語言開發都依賴一個名為 go.mod 的檔案來管理專案和其使用的第三方套件 (dependencies)
 
-```cmd
+```bash
 go mod init hello-world
+```
+創建hello.go
+```go
+//  1. 宣告這個檔案屬於 main 套件 (package)
+//     只有 main 套件才能被編譯成可執行檔
+package main
+
+// 2. 導入 (import) "fmt" 函式庫
+//    "fmt" 包含了格式化 I/O (輸入/輸出) 的函式，例如列印到終端機
+import "fmt"
+
+// 3. 程式執行的入口：main 函式 (function)
+func main() {
+	// 使用 fmt 套件中的 Println 函式，它會將文字印出並換行
+	fmt.Println("Hello, World!")
 ```
 
 執行
 
-```cmd
+```bash
 ❯ go run hello.go
 Hello, World!
 ```
