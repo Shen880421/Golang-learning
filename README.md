@@ -30,24 +30,25 @@ Golang-learning/
 
 先到官網 [https://go.dev/doc/install](https://go.dev/doc/install) 下載
 
-```cmd
-sudo tar -C /usr/local -xzf go1.24.4.linux-amd64.tar.gz
+
+
+設定環境變數 Go 語言本身的執行檔路徑 (永久設定到 .bashrc)
+```bash
+vim ~/.bashrc
+```
+
+```vim
+export PATH=$PATH:/c/Program\ Files/Go/bin
+```
+
+```bash (讓設定生效)
+source ~/.bashrc
 ```
 
 查看版本
 
-```cmd
+```bash
 go version
-```
-
-設定環境變數 Go 語言本身的執行檔路徑 (例如 go, gofmt)
-
-```cmd
-vim ~/.zshrc
-```
-
-```txt
-export PATH=$PATH:/usr/local/go/bin
 ```
 
 #### vscode 開發環境
