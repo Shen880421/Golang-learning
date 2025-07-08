@@ -1,7 +1,10 @@
 # Golang-learning
 ## My First Go Project
 
-這是一個用 Go 語言撰寫的練習專案，目的是熟悉 Golang 的語法與基本開發流程。
+這是一個用 Go 語言撰寫的練習專案，目的是熟悉 Golang 的語法與基本開發流程
+
+## 🙏 參考來源
+本專案參考自 [twtrubiks](https://github.com/twtrubiks) 的相關內容，特此致謝 🙇‍♂️
 
 ## 📦 專案功能
 
